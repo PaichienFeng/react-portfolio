@@ -1,0 +1,38 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&family=Kollektif:wght@200&family=Signika+Negative&family=Ubuntu:wght@200&family=Livvic:wght@300&display=swap');
+
+
+body{
+    background-color: #061628;
+    color: #f2ab06;
+    font-family: 'Livvic';
+}
+
+.name{
+    font-family: 'Signika Negative';
+}
+
+.header {
+    padding: 20px;
+  }
+  
+  .headerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    gap: 20px; /* Adjust the spacing between links */
+
+    .link{
+        font-weight: bold;
+        color: #f2ab06;
+        text-decoration: none;
+        &:focus{
+            color: aliceblue;
+        }
+    }
+  }
+  

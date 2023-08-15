@@ -1,4 +1,5 @@
 import React from 'react';
+import css from '../Resume/Resume.module.scss'
 
 export default function About() {
   return (
