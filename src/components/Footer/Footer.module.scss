@@ -1,0 +1,13 @@
+.iconContainer{
+    display: flex;
+    justify-content: center;
+
+    .icon{
+        color:#cbc4ac ;
+        margin-right: 20px;
+        &:hover{
+            color:aliceblue;
+        }
+    }
+}
+
