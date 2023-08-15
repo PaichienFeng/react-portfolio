@@ -1,12 +1,13 @@
 import React from 'react';
 import css from '../AboutMe/AboutMe.module.scss'
+import image from '../AboutMe/img/profile.jpg';
 
 export default function About() {
   return (
     <div className={css.container}>
       <h3>About Me</h3>
       <div>
-        <img src="../AboutMe/img/profile_photo.jpg" alt="profile" />
+        <img className={css.img} src={image} alt="profile" />
       </div>
       <p>
         Nunc pharetra finibus est at efficitur. Praesent sed congue diam.

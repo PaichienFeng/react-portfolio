@@ -10,16 +10,22 @@ body{
 
 .name{
     font-family: 'Signika Negative';
+    font-size: 50px;
+    letter-spacing: 7px;
+
 }
 
 .header {
     padding: 20px;
-  }
+    margin-left: 50px;
+    margin-right:50px;
   
   .headerContent {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+}
 }
 
 .nav {
@@ -28,6 +34,7 @@ body{
 
     .link{
         font-weight: bold;
+        font-size: x-large;
         color: #f2ab06;
         text-decoration: none;
         &:focus{
