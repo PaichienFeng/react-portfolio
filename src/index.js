@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import About from './components/pages/AboutMe/AboutMe';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Project from './components/pages/Project/Project';
+import Project from './components/pages/Project/ProjectContainer';
 import Contact from './components/pages/Contact/Contact';
 import Resume from './components/pages/Resume/Resume';
 import {

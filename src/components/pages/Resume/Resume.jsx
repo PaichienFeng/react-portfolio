@@ -4,15 +4,33 @@ import css from '../Resume/Resume.module.scss'
 export default function About() {
   return (
     <div className={css.container}>
-      <h1>About Page</h1>
-      <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-      </p>
+      <h1>Resume</h1>
+     <h4>
+      Download my <a target='_blank' className={css.resume} href="https://docs.google.com/document/d/1a6MiozKCZr-fOv7Oic0QW7-SySEQ4qKe6NQY30Kydjk/edit?usp=drive_link">resume</a>
+     </h4>
+     <h2>Front-end Proficiencies</h2>
+
+     <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JAVASCRIPT</li>
+      <li>RESPONSIVE DESIGN</li>
+      <li>REACT</li>
+      <li>BOOTSTRAP</li>
+      <li>MATERIAL UI</li>
+     </ul>
+
+     <h2>Back-end Proficiencies</h2>
+
+     <ul>
+      <li>APIS</li>
+      <li>NODE</li>
+      <li>EXPRESS</li>
+      <li>MYSQL, SEQUELIZE</li>
+      <li>MONGODB, MONGOOSE</li>
+      <li>REST</li>
+      <li>GRAPHQL</li>
+     </ul>
     </div>
   );
 }

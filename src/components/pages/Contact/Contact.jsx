@@ -69,6 +69,7 @@ function Form() {
         <div>
           <h4>Name</h4>    
           <input
+          className={css.nameText}
           value={inputData.name}
           name="name"
           onChange={handleInputChange}
@@ -80,6 +81,7 @@ function Form() {
         <div>
           <h4>Email Address</h4>
           <input
+          className={css.emailText}
           value={inputData.email}
           name="email"
           onChange={handleInputChange}
@@ -90,6 +92,7 @@ function Form() {
         <div>
           <h4>Message</h4>
           <textarea
+          className={css.messageText}
           value={inputData.message}
           name="message"
           onChange={handleInputChange}

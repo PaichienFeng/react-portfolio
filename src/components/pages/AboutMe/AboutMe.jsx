@@ -16,7 +16,13 @@ export default function About() {
         lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
         imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
         in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at. <br/><br />
-        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, libero 
+        adipisci consequatur ipsa quisquam molestias voluptatem maxime repellat 
+        accusamus possimus aut, ullam veritatis excepturi hic reprehenderit 
+        suscipit neque dolores eaque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, libero 
+        adipisci consequatur ipsa quisquam molestias voluptatem maxime repellat 
+        accusamus possimus aut, ullam veritatis excepturi hic reprehenderit 
+        suscipit neque dolores eaque? <br /><br />
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, libero 
         adipisci consequatur ipsa quisquam molestias voluptatem maxime repellat 
         accusamus possimus aut, ullam veritatis excepturi hic reprehenderit 
