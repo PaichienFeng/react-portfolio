@@ -1,6 +1,37 @@
 .container{
-    min-height: 500px;
+    min-height: 600px;
     margin-left: 50px;
     margin-right:50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .animation{
+        transition: transform 0.3s ease-in-out;
+        &:hover{
+            transform: scale(1.05)rotate(5deg);
+   
+        }
+
+          .noUnderline{
+            text-decoration: none !important;
+          }
+
+          .cardLink{
+            text-decoration: none;
+            color: black;
+            font-size: large;
+            font-weight: bold;
+            margin-top: none;
+            margin-bottom: 20px;
+            margin-right: 10px;
+
+            &:hover{
+                cursor: pointer;
+                color: #f2ab06;
+            }
+          }
+      }
+
 
 }
