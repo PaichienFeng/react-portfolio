@@ -1,83 +1,103 @@
 import React, { useState } from 'react';
 import css from '../Contact/Contact.module.scss';
+import Button from '@mui/material/Button';
 
 const initialData = {
+  name: '',
   email: '',
-  lastName: '',
-  firstName: '',
+  message: '',
+}
+
+function isValidEmail(email) {
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  return emailPattern.test(email);
 }
 
 function Form() {
-  // Here we set two state variables for firstName and lastName using `useState`
-  // const [firstName, setFirstName] = useState('');
-  // const [lastName, setLastName] = useState('');
-  // const [email, setEmail] = useState('');
 
-  // const handler = {
-  //   email: setEmail,
-  //   firstName: setFirstName,
-  //   lastName: setLastName,
-  // }
-
-  const [inputData, setInputData] = useState(initialData)
-
+  const [inputData, setInputData] = useState(initialData);
+  const [isValidEmailInput, setIsValidEmailInput] = useState(true);
+  const [isValidMessage, setIsValidMessage] = useState(true)
 
   const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
     const { name, value } = e.target;
-    
+    const email= inputData.email;
+    const message=inputData.message;
     setInputData(function (currentInputData) {
       return {
         ...currentInputData,
         [name]: value,
       };
     })
+
   };
 
+  const handleBlur = ()=>{
+    const email= inputData.email;
+    const message=inputData.message;
+    if(email&& !isValidEmail(email)){
+      setIsValidEmailInput(false)
+    }else{
+      setIsValidEmailInput(true)
+    };
+
+    if(!message){
+      setIsValidMessage(false)
+    }else{
+      setIsValidMessage(true)
+    }
+  }
+
   const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
-    // Alert the user their first and last name, clear the inputs
-
     setInputData(initialData)
-    
-    // setFirstName('');
-    // setLastName('');
   };
 
   return (
-    <div>
-      <p>
-        Hello {inputData.firstName} {inputData.lastName} -- {inputData.email}
-      </p>
+    <div className={css.container}>
+      <h2>
+        Contact
+      </h2>
       <form className="form">
-        <input
-          value={inputData.firstName}
-          name="firstName"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="First Name"
-        />
-        <input
-          value={inputData.lastName}
-          name="lastName"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Last Name"
-        />
 
-        <input
+        <div>
+          <h4>Name</h4>    
+          <input
+          value={inputData.name}
+          name="name"
+          onChange={handleInputChange}
+          type="text"
+        />
+        </div>
+
+        <div>
+          <h4>Email Address</h4>
+          <input
           value={inputData.email}
           name="email"
           onChange={handleInputChange}
+          onBlur={handleBlur}
           type="text"
-          placeholder="Email"
-        />
+        /></div>
 
-        <button type="button" onClick={handleFormSubmit}>
+        <div>
+          <h4>Message</h4>
+          <textarea
+          value={inputData.message}
+          name="message"
+          onChange={handleInputChange}
+          onBlur={handleBlur}
+          type="text"
+        /></div>
+        {!isValidEmailInput && <p>Please enter a valid email address</p>}
+        {!isValidMessage && <p>Message is required</p>}
+        <div> 
+          <Button className={css.button} variant="contained" onClick={handleFormSubmit}>
           Submit
-        </button>
+        </Button>
+        </div>
+
       </form>
     </div>
   );

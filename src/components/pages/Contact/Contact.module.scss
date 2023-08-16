@@ -1,3 +1,23 @@
-body{
-    background-color: #061628;
+.container{
+    min-height: 500px;
+    margin-left: 50px;
+    margin-right:50px;
+
+    h4{
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+    }
+
+    input{
+        margin-bottom: 10px;
+        border-radius: 3px;
+    }
+    .button{
+        background-color: #f2ab06;
+        color: aliceblue;
+        &:hover{
+            background-color: #ba860a;
+        }
+    }
 }

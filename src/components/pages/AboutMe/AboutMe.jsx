@@ -5,7 +5,7 @@ import image from '../AboutMe/img/profile.jpg';
 export default function About() {
   return (
     <div className={css.container}>
-      <h3>About Me</h3>
+      <h2>About Me</h2>
       <div>
         <img className={css.img} src={image} alt="profile" />
       </div>
