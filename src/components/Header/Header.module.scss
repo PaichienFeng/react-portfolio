@@ -42,4 +42,25 @@ body{
         }
     }
   }
-  
+
+  .navBurger{
+    display: none;
+    .navBurgerBtn{
+        color: rgb(90, 84, 84);
+        background-color: #f2ab06;
+
+        .burgerLink{
+            text-decoration: none;
+        }
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    .navBurger{
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+  }
