@@ -8,7 +8,7 @@ function Navigation() {
     <div className={css.nav}>
       <Link className={css.link} to='/'>Home</Link>
       <Link className={css.link} to='/contact'>Contact</Link>
-      <Link className={css.link} to='/project'>Project</Link>
+      <Link className={css.link} to='/project'>Portfolio</Link>
       <Link className={css.link} to='/resume'>Resume</Link>
     </div>
   );

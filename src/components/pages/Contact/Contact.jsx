@@ -17,12 +17,12 @@ function Form() {
 
   const [inputData, setInputData] = useState(initialData);
   const [isValidEmailInput, setIsValidEmailInput] = useState(true);
-  const [isValidMessage, setIsValidMessage] = useState(true)
+  const [isValidMessage, setIsValidMessage] = useState(true);
+  const [isValidName, setIsValidName] = useState(true);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    const email= inputData.email;
-    const message=inputData.message;
+
     setInputData(function (currentInputData) {
       return {
         ...currentInputData,
@@ -32,16 +32,21 @@ function Form() {
 
   };
 
-  const handleBlur = ()=>{
-    const email= inputData.email;
-    const message=inputData.message;
-    if(email&& !isValidEmail(email)){
+  const handleBlur = (e)=>{
+    const {name, value}= e.target 
+    if(name === 'name' && !value.trim()){
+      setIsValidName(false)
+    }else{
+      setIsValidName(true)
+    };
+
+    if(name==='email' && !isValidEmail(value)){
       setIsValidEmailInput(false)
     }else{
       setIsValidEmailInput(true)
     };
 
-    if(!message){
+    if(name==='message' && !value.trim()){
       setIsValidMessage(false)
     }else{
       setIsValidMessage(true)
@@ -67,6 +72,7 @@ function Form() {
           value={inputData.name}
           name="name"
           onChange={handleInputChange}
+          onBlur={handleBlur}
           type="text"
         />
         </div>
@@ -92,6 +98,7 @@ function Form() {
         /></div>
         {!isValidEmailInput && <p>Please enter a valid email address</p>}
         {!isValidMessage && <p>Message is required</p>}
+        {!isValidName && <p>Name is required</p>}
         <div> 
           <Button className={css.button} variant="contained" onClick={handleFormSubmit}>
           Submit
